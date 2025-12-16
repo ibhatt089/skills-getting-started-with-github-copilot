@@ -157,9 +157,9 @@ footer {
 }
 
 .participants-list {
-  list-style: disc;
+  list-style: none; /* hide bullets */
   margin: 0;
-  padding-left: 20px;
+  padding-left: 0;
 }
 
 .participants-list li {
@@ -170,4 +170,41 @@ footer {
   border: 1px solid #e6f0ff;
   color: #0b3d91;
   font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 250ms ease;
+}
+
+.participant-label {
+  display: inline-block;
+  margin-right: 8px;
+}
+
+/* animate removal */
+.removing {
+  opacity: 0;
+  transform: translateX(-8px) scaleY(0.9);
+  height: 0 !important;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  overflow: hidden;
+}
+
+
+/* Small remove button shown next to each participant */
+.participant-remove {
+  background: transparent;
+  border: none;
+  color: #d32f2f;
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.participant-remove:hover {
+  background: rgba(211, 47, 47, 0.08);
 }
